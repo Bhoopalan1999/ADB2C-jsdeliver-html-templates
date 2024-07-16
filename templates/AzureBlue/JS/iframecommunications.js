@@ -10,10 +10,6 @@ window.addEventListener("message", function(event) {
             input.value = data.value;
         }
     } else if (data.type === "submit") {
-        const form = document.getElementById("iframeForm");
-        const actionUrl = form.action;
-
-        // Send the redirect URL to the parent window
-        event.source.postMessage({ type: "redirect", url: actionUrl }, event.origin);
+        document.getElementById("next").click();
     }
 });
